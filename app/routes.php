@@ -22,5 +22,5 @@ Route::get('image/{id}', ['as' => 'single-image', function($id)
 {
 	$image = Image::find($id);
 
-	return $image;
+	return View::make('gallery.image')->with('image', $image);
 }]);
