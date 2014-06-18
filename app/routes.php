@@ -13,14 +13,5 @@
 
 Route::get('/', function()
 {
-	$images = Image::all();
-
-	return View::make('hello')->with('images', $images);
+	//
 });
-
-Route::get('image/{id}', ['as' => 'single-image', function($id)
-{
-	$image = Image::find($id);
-
-	return View::make('gallery.image')->with('image', $image);
-}]);
